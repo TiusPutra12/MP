@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Timotius Putra - Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Timotius Putra — Full-Stack Web Developer crafting high-performance digital experiences with modern technologies.">
+    <title>Timotius Putra — Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
@@ -13,15 +15,29 @@
 </head>
 
 <body>
-    <div class="ambient-light"></div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <nav class="navbar glass">
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Floating Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-content">
-            <a href="#" class="logo">TiusPutra12</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#contact" class="btn-primary">Let's Talk</a>
+            <a href="#" class="logo">Tius<span>Putra</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">Tentang</a>
+                <a href="#work">Proyek</a>
+                <a href="#testimoni">Testimoni</a>
+                <a href="#contact" class="btn-primary">Mari Berdiskusi</a>
             </div>
         </div>
     </nav>
@@ -29,81 +45,200 @@
     <main class="container">
         <!-- Hero Section -->
         <section class="hero reveal">
-            <h1 class="hero-title">Building digital <br> experiences that <span class="text-gradient">matter.</span>
+            <div class="hero-badge">
+                <span class="pulse"></span> Siap bekerja
+            </div>
+            <h1 class="hero-title">Membangun pengalaman<br>digital yang <span class="text-gradient">bermakna.</span>
             </h1>
-            <p class="hero-desc">I am a Web Developer shaping the future of web applications with clean code and modern
-                design.</p>
+            <p class="hero-desc">Full-Stack Web Developer yang membentuk masa depan aplikasi web dengan kode yang
+                bersih, desain modern, dan teknologi mutakhir.</p>
+            <div class="hero-cta">
+                <a href="#work" class="btn-primary">Lihat Proyek</a>
+                <a href="#contact" class="btn-outline">Hubungi Saya</a>
+            </div>
         </section>
 
-        <!-- Bento Grid Section (About & Stats) -->
-        <section class="bento-grid" id="about">
-            <div class="bento-item reveal glass col-span-2">
-                <h3>About Me</h3>
+        <!-- Bento Grid -->
+        <section class="bento-grid stagger-reveal" id="about">
+            <div class="bento-item reveal glass col-span-2" style="--i:0">
+                <h3>Tentang Saya</h3>
                 <p>Mengubah masalah kompleks menjadi solusi kode yang elegan, fungsional, dan user-friendly. Mahasiswa
                     IT dan Ketua BEM di Universitas Triatma Mulya. Founder of ReforceCode.</p>
             </div>
 
+            <div class="bento-item reveal glass col-span-2" style="--i:1">
+                <h3>Keahlian Teknologi</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag purple">Node.js</span>
+                    <span class="skill-tag purple">Laravel</span>
+                    <span class="skill-tag blue">PostgreSQL</span>
+                    <span class="skill-tag blue">Redis</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag purple">MySQL</span>
+                    <span class="skill-tag blue">WebSockets</span>
+                </div>
+            </div>
 
-            <div class="bento-item reveal glass col-span-2">
-                <h3>Experience</h3>
+            <div class="bento-item reveal glass gradient-bg" style="--i:2">
+                <h3 class="stat-number" data-target="1000">0</h3>
+                <p>Proyek</p>
+            </div>
+            <div class="bento-item reveal glass" style="--i:3">
+                <h3 class="stat-number" data-target="15">0</h3>
+                <p>Aplikasi Dirilis</p>
+            </div>
+            <div class="bento-item reveal glass gradient-bg" style="--i:4">
+                <h3 class="stat-number" data-target="2400">0</h3>
+                <p>Commit Tahun Ini</p>
+            </div>
+            <div class="bento-item reveal glass" style="--i:5">
+                <h3 class="stat-number" data-target="1000">0</h3>
+                <p>Pengikut</p>
+            </div>
+
+            <div class="bento-item reveal glass col-span-2" style="--i:6">
+                <h3>Pengalaman</h3>
                 <div class="exp-item">
                     <h4>ECHO MEDIA</h4>
                     <span>2026 • Web Development</span>
-                    <p>Spearheaded architectural migration from monolithic to Microservices. Reduced AWS overhead by
-                        15%.</p>
+                    <p>Memimpin migrasi arsitektur dari monolitik ke Microservices. Mengurangi biaya overhead AWS
+                        sebesar 15%.</p>
                 </div>
             </div>
-            <div class="bento-item reveal glass gradient-bg">
-                <h3>1k</h3>
-                <p>Project</p>
-            </div>
 
-            <div class="bento-item reveal glass">
-                <h3>15+</h3>
-                <p>Apps Deployed</p>
-            </div>
-
-            <div class="bento-item reveal glass gradient-bg">
-                <h3>2.4k+</h3>
-                <p>Commits This Year</p>
-            </div>
-
-            <div class="bento-item reveal glass">
-                <h3>1K</h3>
-                <p>Followers</p>
+            <div class="bento-item reveal glass col-span-2" style="--i:7">
+                <h3>Pendidikan</h3>
+                <div class="exp-item">
+                    <h4>Universitas Triatma Mulya</h4>
+                    <span>Information Technology</span>
+                    <p>Ketua BEM — aktif dalam pengembangan sistem informasi, machine learning, dan integrasi AI.</p>
+                </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section class="work" id="work">
-            <h2 class="section-title reveal">Selected Work</h2>
-            <div class="projects-grid">
+            <h2 class="section-title reveal">Proyek <span>Pilihan</span></h2>
+            <div class="projects-grid stagger-reveal">
 
-                <div class="project-card reveal glass">
-                    <div class="project-img bg-purple"></div>
+                <!-- Project 1 -->
+                <div class="project-card reveal glass" style="--i:0" data-project="omnicart">
+                    <div class="project-img bg-purple">
+                        <div class="project-icon">🛒</div>
+                        <div class="project-overlay"><span>Lihat Detail ↓</span></div>
+                    </div>
                     <div class="project-content">
                         <span class="tag">E-Commerce</span>
                         <h3>OmniCart</h3>
-                        <p>Next.js + Redis. Handled 10k req/s with zero downtime. Load time reduced from 4s to 0.8s.</p>
+                        <p>Next.js + Redis. Handled 10k req/s with zero downtime.</p>
+                    </div>
+                    <div class="expand-indicator"><span class="chevron">▾</span> Detail</div>
+                    <div class="project-detail">
+                        <div class="project-detail-inner">
+                            <div class="detail-grid">
+                                <div class="detail-section">
+                                    <h4>Masalah</h4>
+                                    <p>Infrastruktur lama mengalami masalah latensi dan crash selama event flash sale
+                                        dengan traffic tinggi.</p>
+                                    <h4 style="margin-top:1rem">Solusi</h4>
+                                    <p>Mengimplementasikan SSR dengan Next.js dan caching Redis berkecepatan tinggi
+                                        untuk pemuatan halaman secepat kilat.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Hasil</h4>
+                                    <ul>
+                                        <li>10k request/detik, tanpa downtime</li>
+                                        <li>Waktu muat: 4s → 0.8s</li>
+                                        <li>Integrasi 5 payment gateway</li>
+                                    </ul>
+                                    <h4 style="margin-top:1rem">Tech Stack</h4>
+                                    <div class="detail-tech">
+                                        <span>Next.js</span><span>Redis</span><span>PostgreSQL</span><span>Stripe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card reveal glass">
-                    <div class="project-img bg-blue"></div>
+                <!-- Project 2 -->
+                <div class="project-card reveal glass" style="--i:1" data-project="streamline">
+                    <div class="project-img bg-blue">
+                        <div class="project-icon">💬</div>
+                        <div class="project-overlay"><span>Lihat Detail ↓</span></div>
+                    </div>
                     <div class="project-content">
                         <span class="tag">SaaS</span>
                         <h3>Streamline Chat</h3>
-                        <p>Socket.io WebSockets. <100ms latency. End-to-End Encryption for maximum data privacy.</p>
+                        <p>Socket.io WebSockets. <100ms latency with E2E Encryption.</p>
+                    </div>
+                    <div class="expand-indicator"><span class="chevron">▾</span> Detail</div>
+                    <div class="project-detail">
+                        <div class="project-detail-inner">
+                            <div class="detail-grid">
+                                <div class="detail-section">
+                                    <h4>Masalah</h4>
+                                    <p>Sistem chat internal sebelumnya mengalami lag pesan 2-3 detik.</p>
+                                    <h4 style="margin-top:1rem">Solusi</h4>
+                                    <p>Memanfaatkan WebSockets (Socket.io) untuk komunikasi dua arah yang instan.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Hasil</h4>
+                                    <ul>
+                                        <li>Latensi sangat rendah di bawah 100ms</li>
+                                        <li>Indikator mengetik & status real-time</li>
+                                        <li>Enkripsi End-to-End (E2EE)</li>
+                                    </ul>
+                                    <h4 style="margin-top:1rem">Tech Stack</h4>
+                                    <div class="detail-tech">
+                                        <span>Socket.io</span><span>Node.js</span><span>React</span><span>MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card reveal glass">
-                    <div class="project-img bg-green"></div>
+                <!-- Project 3 -->
+                <div class="project-card reveal glass" style="--i:2" data-project="supplynode">
+                    <div class="project-img bg-green">
+                        <div class="project-icon">📦</div>
+                        <div class="project-overlay"><span>Lihat Detail ↓</span></div>
+                    </div>
                     <div class="project-content">
                         <span class="tag">Logistics</span>
                         <h3>SupplyNode API</h3>
-                        <p>Optimized PostgreSQL queries and implemented multi-column indexing. Boosted read speeds by
-                            500%.</p>
+                        <p>Optimized PostgreSQL queries. Boosted read speeds by 500%.</p>
+                    </div>
+                    <div class="expand-indicator"><span class="chevron">▾</span> Detail</div>
+                    <div class="project-detail">
+                        <div class="project-detail-inner">
+                            <div class="detail-grid">
+                                <div class="detail-section">
+                                    <h4>Masalah</h4>
+                                    <p>Database yang tidak diindeks menyebabkan hambatan pengambilan data yang
+                                        signifikan.</p>
+                                    <h4 style="margin-top:1rem">Solusi</h4>
+                                    <p>Mengoptimalkan query PostgreSQL dan mengimplementasikan pengindeksan multi-kolom
+                                        yang strategis.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Hasil</h4>
+                                    <ul>
+                                        <li>Kecepatan baca data 500% lebih cepat</li>
+                                        <li>Dokumentasi Swagger/OpenAPI</li>
+                                        <li>Mendukung jutaan entri inventaris</li>
+                                    </ul>
+                                    <h4 style="margin-top:1rem">Tech Stack</h4>
+                                    <div class="detail-tech">
+                                        <span>Node.js</span><span>PostgreSQL</span><span>Express</span><span>Swagger</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -112,27 +247,33 @@
 
         <!-- Testimonials -->
         <section class="testimonials" id="testimoni">
-            <h2 class="section-title reveal">What they say</h2>
+            <h2 class="section-title reveal">Apa kata <span>mereka</span></h2>
             <div class="testi-scroll reveal">
                 <div class="testi-card glass">
-                    <p>"Budi is an exceptionally competent engineer. He doesn’t just write code; he provides
-                        sophisticated architectural solutions."</p>
+                    <div class="quote-icon">❝</div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Timotius adalah engineer yang sangat kompeten. Dia tidak hanya menulis kode; dia memberikan
+                        solusi arsitektur yang canggih."</p>
                     <div class="author">
                         <strong>John Doe</strong>
                         <span>CTO at RetailCorp</span>
                     </div>
                 </div>
                 <div class="testi-card glass">
-                    <p>"Working with Budi is a pleasure. His time estimates are always spot-on, and his code is
-                        remarkably clean."</p>
+                    <div class="quote-icon">❝</div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Bekerja sama dengan Timotius sangat menyenangkan. Estimasi waktunya selalu tepat, dan kodenya
+                        sangat rapi."</p>
                     <div class="author">
                         <strong>Jane Smith</strong>
                         <span>Product Manager</span>
                     </div>
                 </div>
                 <div class="testi-card glass">
-                    <p>"His attention to UI detail is unmatched. Budi's code implementation is always perfectly
-                        pixel-aligned with my Figma designs."</p>
+                    <div class="quote-icon">❝</div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Perhatiannya pada detail UI tidak tertandingi. Implementasi kode Timotius selalu selaras
+                        sempurna dengan desain Figma saya."</p>
                     <div class="author">
                         <strong>Robert Brown</strong>
                         <span>Lead Designer</span>
@@ -142,17 +283,18 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer reveal" id="contact">
         <div class="footer-content glass">
-            <h2>Ready to collaborate?</h2>
-            <p>Let's build something amazing together.</p>
+            <h2>Siap untuk berkolaborasi?</h2>
+            <p>Mari bangun sesuatu yang luar biasa bersama-sama.</p>
             <div class="social-links">
-                <a href="https://github.com/budidev" target="_blank" class="btn-outline">GitHub</a>
+                <a href="https://github.com/TiusPutra12" target="_blank" class="btn-outline">GitHub</a>
                 <a href="https://linkedin.com/in/budidev" target="_blank" class="btn-outline">LinkedIn</a>
-                <a href="mailto:tiusid301@gmail.com" class="btn-primary">Email Me</a>
+                <a href="mailto:tiusid301@gmail.com" class="btn-primary">Email Saya</a>
             </div>
         </div>
-        <p class="copyright">© 2026 Timotius Putra. All rights reserved.</p>
+        <p class="copyright">© 2026 Timotius Putra. Hak cipta dilindungi undang-undang.</p>
     </footer>
 
     <script src="script.js"></script>
